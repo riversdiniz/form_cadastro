@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to top ,#0D101C, #0B1626);
+    box-sizing: border-box;
+}
+
+input{
+    /* border: 1px solid gray; */
+    /* border-radius: 0.2rem; */
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.2px solid white;
+    padding: 0.25rem 0;
+    margin: 0.5rem 0 1rem 0;
+    color: white;
+    width: 100%;
+    position: relative;
+}
+
+div{
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+input:focus{
+    outline: none;
+}
+
+label{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    margin: 30px 0 25px 0;
+    position: relative;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.form::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 150%;
+    background: #0B468D;
+    animation: rodar 5s linear infinite;
+    box-shadow: 0 0 1rem 1rem #0B468D;
+}
+
+@keyframes rodar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.form::after{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to top ,#0D101C, #0B1626);
+    inset: 4px;
+    border-radius: 0.8rem;
+}
+
+form{
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+button{
+    margin: 20px 0 30px 0;
+    font-weight: 700;
+    text-align: center;
+    align-self: center;
+    border: 2px solid #0F2A4A;
+    /* border-radius: 0.3rem; */
+    /* box-shadow: 0 0 1rem 0.1rem #0F2A4A; */
+    /* background-color: #FAFAFE; */
+    background: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.1rem;
+    transition: all 0.05s;
+    position: relative;
+    animation: pop 1.5s linear infinite;
+}
+
+@keyframes pop{
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.05);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+button:hover{
+    box-shadow: 0 0 1rem 0.1rem #0F2A4A;
+    background-color: #FAFAFE;
+    color: black;
+}
